@@ -1,0 +1,40 @@
+/* ========== RESET ========= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Padding below the footer and lighter body text */
+  body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0;
+  }
+  
+  ul,
+  ol {
+      padding: 0;
+      list-style: none;
+  }
+  
+  a {
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  
