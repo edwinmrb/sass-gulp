@@ -1,10 +1,21 @@
 @use "../helpers/variables" as v;
-//===========================================
-// -Home Page start
-//===========================================
-body{
- background-color: v.$default;   
+@use "../helpers/mixins" as mixin;
+
+/* ============= Hero Section Start =============== */
+
+/* =============== MEDIA QUERY =============== */
+
+@include mixin.media-break(xl) {
+   
 }
-//===========================================
-// -Home Page end
-//===========================================
+
+@include mixin.media-break(lg) {
+   
+}
+@include mixin.media-break(md) {
+   
+}
+
+@include mixin.media-break(sm) {
+    
+}

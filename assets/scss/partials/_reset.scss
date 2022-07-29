@@ -1,3 +1,4 @@
+@use "../helpers/variables" as v;
 /* ========== RESET ========= */
 * {
     padding: 0;
@@ -10,8 +11,10 @@
   }
   /* Padding below the footer and lighter body text */
   body {
-    height: 100%;
+    width: 100%;
     font-family: "Roboto", sans-serif;
+    background-color: #fff;
+    font-family: v.$font-default;
   }
   
   h1,
@@ -37,4 +40,7 @@
       cursor: pointer;
   }
   
-  
+  img{
+    width: 100%;
+    height: auto;
+}

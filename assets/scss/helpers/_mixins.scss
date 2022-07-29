@@ -1,13 +1,33 @@
 //===========================================
 // -Mixins start
 //===========================================
+@use "./variables" as v;
 
-@mixin text-style($font-size, $line-height, $font-weight,$color,$letter-spacing:0px) {
+@mixin text-style($font-size, $line-height, $font-weight, $color, $letter-spacing: 0px, $font-family: v.$font-default) {
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $font-weight;
     color: $color;
     letter-spacing: $letter-spacing;
+    font-family: $font-family;
+}
+
+@mixin flex-default($fd: row, $jc: space-between, $ai: center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+@mixin media-break($breakpoint) {
+    @if map-has-key(v.$breakpoints, $breakpoint) {
+        @media screen and (max-width: map-get(v.$breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn "This value '#{$breakpoint}' was not declared as a breakpoint.";
+    }
 }
 
 //===========================================
